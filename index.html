@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show Booking Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">🎭 Light Show </div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#bookings">Bookings</a></li>
+<li><a href="#shows">Shows</a></li>
+<li><a href="#theatre">Theatre</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Book Your Favourite Show</h1>
+<p>Reserve your seat online in minutes.</p>
+<button onclick="document.getElementById('bookings').scrollIntoView()">Book Now</button>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+
+<p>
+We provide a fast and secure online booking platform for concerts,
+movies, theatre performances and live entertainment.
+</p>
+
+</section>
+
+<section id="shows">
+
+    <h2 class="title">AVAILABLE SHOWS</h2>
+    <p class="subtitle">Choose your favorite show and book your seats</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="Images/concert.jpg" alt="Music Concert">
+
+            <div class="icon">🎵</div>
+
+            <h3>Music Concert</h3>
+
+            <p>Enjoy an unforgettable live music experience.</p>
+
+            <div class="price">Price: Ksh 1,500</div>
+
+            <button onclick="bookShow('Music Concert',1500)">Book Now</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/comedy.jpg" alt="Comedy Night">
+
+            <div class="icon">😂</div>
+
+            <h3>Comedy Night</h3>
+
+            <p>Laugh all night with the best comedians.</p>
+
+            <div class="price">Price: Ksh 1,000</div>
+
+            <button onclick="bookShow('Comedy Night',1000)">Book Now</button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/theatre.jpg" alt="Drama Theatre">
+
+            <div class="icon">🎭</div>
+
+            <h3>Drama Theatre</h3>
+
+            <p>Experience amazing live theatre performances.</p>
+
+            <div class="price">Price: Ksh 800</div>
+            
+
+            <button onclick="bookShow('Drama Theatre',800)">Book Now</button>
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="bookings">
+
+<h2>Book Your Ticket</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<select id="show">
+
+<option value="1500">Music Concert - Ksh1500</option>
+
+<option value="1000">Comedy Night - Ksh1000</option>
+
+<option value="800">Drama Theatre - Ksh800</option>
+
+<label>Selected Show</label>
+
+<input type="text" id="selectedShow" readonly>
+
+<label>Ticket Price</label>
+
+<input type="text" id="ticketPrice" readonly>
+
+</select>
+
+<select id="seat">
+
+<option value="1">1 Seat</option>
+<option value="2">2 Seats</option>
+<option value="3">3 Seats</option>
+<option value="4">4 Seats</option>
+<option value="5">5 Seats</option>
+
+</select>
+
+<button type="button" onclick="calculate()">Calculate Price</button>
+
+<h3 id="total">Total: Ksh 0</h3>
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+</section>
+
+<section id="theatre">
+
+<h2>Our Theatre</h2>
+
+<p>
+
+Modern theatre with comfortable seating, excellent sound and lighting systems.
+
+</p>
+
+</section>
+
+<footer>
+
+<h3>Contact Us</h3>
+
+<p>📞 0794045181</p>
+
+<div class="contact">
+    <img src="images/Email.png" alt="Email" width="35" height="15">
+    <a href="mailto:samuel@example.com">bitakisamuel@gmail.com</a>
+</div>
+
+<p>© 2026 Show Booking Website</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
